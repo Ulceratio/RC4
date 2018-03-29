@@ -147,7 +147,7 @@ namespace RC
         private const int c = 2531011;
         private byte LCG()
         {
-            X = ((a * X + c) % (~0));
+            X = ((a * X + c) % long.MaxValue);
             return (byte)(X % 256);
         }
 
