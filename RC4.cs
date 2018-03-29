@@ -147,7 +147,8 @@ namespace RC
         private const int c = 2531011;
         private byte LCG()
         {
-            return (byte)((a * X + c) % 256);
+            X = ((a * X + c) % (~0));
+            return (byte)(X % 256);
         }
 
     }
